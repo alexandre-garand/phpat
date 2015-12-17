@@ -1,2 +1,2 @@
 # phpat
-chat pour le cours p62
+Prjet de chat pour le cours P62 A15
