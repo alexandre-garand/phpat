@@ -2,8 +2,9 @@
 <html>
 <head lang="fr">
     <meta charset="UTF-8">
-    <title><? Site_name ?></title>
+    <title><php?SITE_NAME?></title>
+    <link href="../css/main.css" rel="stylesheet">
 </head>
 <body>
-<h1><?SITE_NAME?></h1>
+<h1><? echo SITE_NAME?></h1>
 <?php require_once '_header.php'?>
