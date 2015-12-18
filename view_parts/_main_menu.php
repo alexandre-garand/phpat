@@ -7,7 +7,7 @@ $menu_date=array(
 );
 var_dump($menu_date);
 foreach($menu_date as $menu => $url){
-    echo "<li><a href=\"$url\">menu</li>";
+    echo "<li><a href=\"$url\">$menu</li>";
 }
 
 ?>

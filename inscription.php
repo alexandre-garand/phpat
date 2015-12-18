@@ -1,7 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
 <?php
-/**
- * Created by PhpStorm.
- * User: agarand
- * Date: 2015-12-17
- * Time: 11:31
- */
+require_once '_defines.php';
+require_once 'data/_main_data.php';
+
+$site_data[PAGE_ID] = 'Accueil';
+?>
+<?php
+require_once 'view_parts';
+?>

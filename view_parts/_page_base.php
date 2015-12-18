@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head lang="fr">
-    <meta charset="UTF-8">
-    <title><?= SITE_NAME ?></title>
-    <link href="../css/main.css" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><?= SITE_NAME . ' - ' . ucfirst($site_data[PAGE_ID]) ?></title>
 </head>
 <body>
-<div id="wrapper">
-<?php require_once '_header.php'?>
-
+<div id="wrapper"> <!--ouverture wrapper-->
+    <?php require_once '_header.php'; ?>
