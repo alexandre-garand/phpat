@@ -5,5 +5,5 @@
     <p>Pseudonyme : <input type="text" name="pseudo" /></p>
     <p>Mot de passe : <input type="text" name="motdepasse" /> </p>
 
-        <p><input type="submit" value="OK"></p>
+        <p><input type="submit" value="Inscription"></p>
     </form>
