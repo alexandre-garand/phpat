@@ -1,6 +1,7 @@
 li {
     background-color: ghostwhite;
-    color: blue;
+    color: black;
     border-style: solid;
     text-align: right;
+    display: inline-block;
 }

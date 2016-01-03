@@ -1,4 +1,4 @@
-<?php
+<ul><?php
 $menu_date=array(
     'Accueil'=>'index.php',
     'Contact'=>'contact.php',
@@ -12,6 +12,6 @@ foreach($menu_date as $menu => $url){
 
 ?>
 
-<ul>
-    <li><a href="../index.php"></li>
-</ul>
+<!-- <ul> -->
+ <!--   <li><a href="../index.php"></li> -->
+<!--</ul> -->

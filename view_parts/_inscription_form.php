@@ -1,7 +1,8 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: agarand
- * Date: 2015-12-17
- * Time: 11:31
- */
+<form><?php
+    echo 'Nom :';
+    echo 'Prenom :';
+    echo 'Courriel :';
+    echo 'Pseudonyme :';
+    echo 'Mot de passe :';
+
+?></form>
