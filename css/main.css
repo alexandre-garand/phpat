@@ -1,3 +1,7 @@
+#tmsg_cont {
+    display: block;
+}
+
 li {
     background-color: ghostwhite;
     color: black;
