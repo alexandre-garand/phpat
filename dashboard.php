@@ -50,3 +50,5 @@ require_once 'db/_talkmsg_data.php';
 <?php
 require_once 'view_parts/_page_bottom.php';
 ?>
+
+<?php ?>
