@@ -50,7 +50,7 @@ if (array_key_exists('password', $_POST)){
     var_dump($password);
     var_dump($password_ok);
 }
-if ($prenom && $nom && $courriel && $username_ok && $password_ok){
+if ($prenom_ok && $nom_ok && $courriel_ok && $username_ok && $password_ok){
     //On enregistre les données et s'en va sur une autre page
     header("Location: php_donnees_ok.php"); //redirection http
 }
