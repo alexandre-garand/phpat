@@ -9,12 +9,13 @@ require_once 'view_parts/_page_base.php';
 
     <div id="main">
 <ul>
-    <li class="tmsg_cont" style="background-color: #ff3fd4;">
+    <?php foreach ($talk_msg_data as $tmsg){?>
+    <li class="tmsg_cont" style="background-color: <?php echo $tsmg['tsmg_color'] ?>">
         <div class="tmsg_head">
-            <span class="tmsg_time">2016-01-04 12:15</span>
-            <span class="tmsg_username">antoinesuper2016</span>
+            <span class="tmsg_time"><?php echo $tsmg['tsmg_time'] ?></span>
+            <span class="tmsg_username"><?php echo $tsmg['tsmg_user'] ?></span>
             </div>
-        <p class="tmgs_body">Salut à tous. Il y a quelqu'un en 2016 icitte ?</p>
+        <p class="tmgs_body"><?php echo $tsmg['tsmg_body'] ?></p>
         </li>
     <li class="tmsg_cont" style="background-color: #2fffda;">
         <div class="tmsg_head">
@@ -45,11 +46,11 @@ require_once 'view_parts/_page_base.php';
         <p class="tmgs_body">Monsieur ça va être le temps d'arrêter là. J'ai pas assez dor...</p>
     </li>
 </ul>
-
+        <?php }?>
     </div>
 
 <?php
 require_once 'view_parts/_page_bottom.php';
 ?>
 
-<?php ?>
+
