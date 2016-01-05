@@ -106,6 +106,7 @@ if ($prenom_ok && $nom_ok && $courriel_ok && $pseudo_ok && $mot_passe_ok) {
            value="<?php echo array_key_exists('pseudo', $_POST) ? $_POST['pseudo'] : '' ?>"/>
     <label for="mot_passe">Password : </label>
     <input type="text" name="mot_passe" id="mot_passe"
+           class="<?php echo $in_post && ! $mot_passe_ok ? 'error' : '';?>"
            value="<?php echo array_key_exists('mot_passe', $_POST) ? $_POST['mot_passe'] : '' ?>"/>
     <input type="submit" name="register" id="register" value="S'inscrire"/>
 </form>
