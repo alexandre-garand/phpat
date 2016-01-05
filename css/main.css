@@ -2,6 +2,10 @@
     display: block;
 }
 
+form[name="inscription"] .error {
+    background-color: coral;
+}
+
 /*li {
     background-color: ghostwhite;
     color: black;
