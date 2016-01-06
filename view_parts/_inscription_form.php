@@ -63,14 +63,14 @@ if (array_key_exists('pseudo', $_POST)) {
     }
     var_dump($pseudo);
     var_dump($pseudo_ok);
-    var_dump($pseudo_msg = '');
+    var_dump($pseudo_msg);
 }
 /**
  * Validation du mot de passe
  */
 $mot_passe_ok = false;
 $mot_passe_msg = '';
-if (array_key_exists('mot-passe', $_POST)) {
+if (array_key_exists('mot_passe', $_POST)) {
     $mot_passe = filter_input(INPUT_POST, 'mot_passe', FILTER_SANITIZE_STRING);
     // Validation du mot de passe: alpha, chiffres,caracteres speciaux, min de 4 caracteres
     $mot_passe_ok = (1 === preg_match('/^[a-zA-Z0-9%&$!*?]{4,}$/', $mot_passe));
