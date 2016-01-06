@@ -1,3 +1,8 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/phpat/css/main.css" />
+</head>
+
 <?php
 var_dump($_POST); // Inspecter les données POST
 $in_post = array_key_exists('register', $_POST); // En est en réception
@@ -87,26 +92,40 @@ if ($prenom_ok && $nom_ok && $courriel_ok && $pseudo_ok && $mot_passe_ok) {
     exit;
 }
 ?>
+    <br/>
 <form id="inscription" name="inscription" xmlns="http://www.w3.org/1999/html" method="post">
     <label for="prenom">Prénom : </label>
     <input type="text" name="prenom" id="prenom"
            class="<?php echo $in_post && ! $prenom_ok ? 'error' : '';?>"
            value="<?php echo array_key_exists('prenom', $_POST) ? $_POST['prenom'] : '' ?>"/>
+    <?php if ( ! $prenom_ok) {?>
+        <span style="color: red;">
+            <?php echo($prenom_msg);  ?>
+        </span>
+    <?php
+    }
+    ?>
+
+    <br/>
     <label for="nom">Nom : </label>
     <input type="text" name="nom" id="nom"
             class="<?php echo $in_post && ! $nom_ok ? 'error' : '';?>"
             value="<?php echo array_key_exists('nom', $_POST) ? $_POST['nom'] : '' ?>"/>
+    <br/>
     <label for="courriel">Courriel : </label>
     <input type="text" name="courriel" id="courriel"
            class="<?php echo $in_post && ! $courriel_ok ? 'error' : '';?>"
            value="<?php echo array_key_exists('courriel', $_POST) ? $_POST['courriel'] : '' ?>"/>
+    <br/>
     <label for="pseudo">Pseudo : </label>
     <input type="text" name="pseudo" id="pseudo"
            class="<?php echo $in_post && ! $pseudo_ok ? 'error' : '';?>"
            value="<?php echo array_key_exists('pseudo', $_POST) ? $_POST['pseudo'] : '' ?>"/>
+    <br/>
     <label for="mot_passe">Password : </label>
     <input type="text" name="mot_passe" id="mot_passe"
            class="<?php echo $in_post && ! $mot_passe_ok ? 'error' : '';?>"
            value="<?php echo array_key_exists('mot_passe', $_POST) ? $_POST['mot_passe'] : '' ?>"/>
+    <br/>
     <input type="submit" name="register" id="register" value="S'inscrire"/>
 </form>
