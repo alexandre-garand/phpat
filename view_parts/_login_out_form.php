@@ -6,12 +6,16 @@ $password = null;
 if (array_key_exists('dologin', $_POST)
     && array_key_exists('username', $_POST)
     && array_key_exists('password', $_POST)) { // User cherche à se connecter
+
+
     require_once('db/_user.php');
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
     if ($auth = user_authenticate($username,$password)) {//authentifié
         do_login($username); // Connecté
-    } else {
+
+   } else { //( ! array_key_exists($_POST['username'] && array_key_exists($_POST['password'])));
+        echo "Vous devez entrer un indentifiant et mot de passe valide";
         // TODO Gérer le bla bla de authentification invalide ici
     }
 //    var_dump($auth);exit();
